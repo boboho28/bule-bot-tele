@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tv-signal-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn main:app
+    envVars:
+      - key: BOT_TOKEN
+        value: your_bot_token
+      - key: CHAT_ID
+        value: your_chat_id
